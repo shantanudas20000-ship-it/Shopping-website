@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <meta name="description"
-        content="ShantanuShop - A modern frontend shopping website built with HTML, CSS and JavaScript.">
+        content="ShantanuShop - Modern frontend shopping website built with HTML, CSS and JavaScript.">
 
     <title>ShantanuShop | Modern Shopping</title>
 
@@ -14,7 +14,8 @@
 
 <body>
 
-    <!-- Header -->
+    <!-- ================= HEADER ================= -->
+
     <header class="header">
 
         <a href="#" class="logo">
@@ -23,6 +24,7 @@
 
         <div class="search-box">
             <span>🔍</span>
+
             <input
                 type="search"
                 id="search"
@@ -39,12 +41,65 @@
     </header>
 
 
-    <!-- Hero Section -->
+    <!-- ================= CART PANEL ================= -->
+
+    <div class="cart-overlay" id="cart-overlay"></div>
+
+    <aside class="cart-panel" id="cart-panel">
+
+        <div class="cart-header">
+
+            <div>
+                <span class="cart-label">YOUR SHOPPING</span>
+                <h2>Your Cart</h2>
+            </div>
+
+            <button
+                type="button"
+                class="close-cart"
+                id="close-cart"
+                aria-label="Close cart"
+            >
+                ✕
+            </button>
+
+        </div>
+
+        <div id="cart-items">
+            <p class="empty-cart">
+                🛒 Your cart is empty.
+            </p>
+        </div>
+
+        <div class="cart-footer">
+
+            <div class="cart-total">
+                <span>Total</span>
+                <strong id="cart-total">₹0</strong>
+            </div>
+
+            <button
+                type="button"
+                class="checkout-btn"
+                id="checkout-btn"
+            >
+                Proceed to Checkout →
+            </button>
+
+        </div>
+
+    </aside>
+
+
+    <!-- ================= HERO ================= -->
+
     <section class="hero">
 
         <div class="hero-content">
 
-            <span class="hero-badge">✨ New Collection</span>
+            <span class="hero-badge">
+                ✨ New Collection
+            </span>
 
             <h1>
                 Shop Smart.<br>
@@ -73,151 +128,273 @@
     </section>
 
 
-    <!-- Products -->
-    <section class="products" id="products">
+    <!-- ================= PRODUCTS ================= -->
 
-        <div class="section-heading">
-            <div>
-                <span class="section-label">OUR COLLECTION</span>
-                <h2>Featured Products</h2>
+    <main>
+
+        <section class="products" id="products">
+
+            <div class="section-heading">
+
+                <div>
+                    <span class="section-label">
+                        OUR COLLECTION
+                    </span>
+
+                    <h2>Featured Products</h2>
+                </div>
+
+                <p>
+                    Handpicked products for you
+                </p>
+
             </div>
 
-            <p>Handpicked products for you</p>
-        </div>
 
-
-        <div class="product-container" id="product-container">
-
-            <!-- Product 1 -->
-            <article
-                class="product"
-                data-name="Running Shoes"
+            <div
+                class="product-container"
+                id="product-container"
             >
-                <div class="product-img shoes">
-                    👟
-                    <span class="product-tag">Popular</span>
-                </div>
 
-                <div class="product-info">
-                    <h3>Running Shoes</h3>
-                    <p>Comfortable everyday shoes</p>
+                <!-- PRODUCT 1 -->
 
-                    <div class="product-bottom">
-                        <h4>₹1,499</h4>
+                <article
+                    class="product"
+                    data-name="Running Shoes"
+                    data-price="1499"
+                >
 
-                        <button
-                            type="button"
-                            onclick="addToCart('Running Shoes')"
-                        >
-                            Add +
-                        </button>
+                    <div class="product-img shoes">
+
+                        <span class="product-icon">
+                            👟
+                        </span>
+
+                        <span class="product-tag">
+                            Popular
+                        </span>
+
                     </div>
-                </div>
-            </article>
+
+                    <div class="product-info">
+
+                        <span class="category">
+                            Footwear
+                        </span>
+
+                        <h3>Running Shoes</h3>
+
+                        <p>
+                            Comfortable everyday shoes
+                        </p>
+
+                        <div class="product-bottom">
+
+                            <h4>₹1,499</h4>
+
+                            <button
+                                type="button"
+                                class="add-btn"
+                                onclick="addToCart('Running Shoes')"
+                            >
+                                Add +
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </article>
 
 
-            <!-- Product 2 -->
-            <article
-                class="product"
-                data-name="Wireless Headphones"
+                <!-- PRODUCT 2 -->
+
+                <article
+                    class="product"
+                    data-name="Wireless Headphones"
+                    data-price="999"
+                >
+
+                    <div class="product-img headphones">
+
+                        <span class="product-icon">
+                            🎧
+                        </span>
+
+                        <span class="product-tag">
+                            Trending
+                        </span>
+
+                    </div>
+
+                    <div class="product-info">
+
+                        <span class="category">
+                            Electronics
+                        </span>
+
+                        <h3>Wireless Headphones</h3>
+
+                        <p>
+                            Enjoy high quality sound
+                        </p>
+
+                        <div class="product-bottom">
+
+                            <h4>₹999</h4>
+
+                            <button
+                                type="button"
+                                class="add-btn"
+                                onclick="addToCart('Wireless Headphones')"
+                            >
+                                Add +
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <!-- PRODUCT 3 -->
+
+                <article
+                    class="product"
+                    data-name="Smart Watch"
+                    data-price="1999"
+                >
+
+                    <div class="product-img watch">
+
+                        <span class="product-icon">
+                            ⌚
+                        </span>
+
+                        <span class="product-tag">
+                            New
+                        </span>
+
+                    </div>
+
+                    <div class="product-info">
+
+                        <span class="category">
+                            Accessories
+                        </span>
+
+                        <h3>Smart Watch</h3>
+
+                        <p>
+                            Smart lifestyle companion
+                        </p>
+
+                        <div class="product-bottom">
+
+                            <h4>₹1,999</h4>
+
+                            <button
+                                type="button"
+                                class="add-btn"
+                                onclick="addToCart('Smart Watch')"
+                            >
+                                Add +
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <!-- PRODUCT 4 -->
+
+                <article
+                    class="product"
+                    data-name="Travel Backpack"
+                    data-price="799"
+                >
+
+                    <div class="product-img backpack">
+
+                        <span class="product-icon">
+                            🎒
+                        </span>
+
+                        <span class="product-tag">
+                            Best Value
+                        </span>
+
+                    </div>
+
+                    <div class="product-info">
+
+                        <span class="category">
+                            Travel
+                        </span>
+
+                        <h3>Travel Backpack</h3>
+
+                        <p>
+                            Perfect for college and travel
+                        </p>
+
+                        <div class="product-bottom">
+
+                            <h4>₹799</h4>
+
+                            <button
+                                type="button"
+                                class="add-btn"
+                                onclick="addToCart('Travel Backpack')"
+                            >
+                                Add +
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+
+            <div
+                class="no-results"
+                id="no-results"
             >
-                <div class="product-img headphones">
-                    🎧
-                    <span class="product-tag">Trending</span>
-                </div>
+                <div>🔍</div>
+                <h3>No products found</h3>
+                <p>
+                    Try searching for another product.
+                </p>
+            </div>
 
-                <div class="product-info">
-                    <h3>Wireless Headphones</h3>
-                    <p>Enjoy high quality sound</p>
+        </section>
 
-                    <div class="product-bottom">
-                        <h4>₹999</h4>
-
-                        <button
-                            type="button"
-                            onclick="addToCart('Wireless Headphones')"
-                        >
-                            Add +
-                        </button>
-                    </div>
-                </div>
-            </article>
+    </main>
 
 
-            <!-- Product 3 -->
-            <article
-                class="product"
-                data-name="Smart Watch"
-            >
-                <div class="product-img watch">
-                    ⌚
-                    <span class="product-tag">New</span>
-                </div>
+    <!-- ================= FOOTER ================= -->
 
-                <div class="product-info">
-                    <h3>Smart Watch</h3>
-                    <p>Smart lifestyle companion</p>
-
-                    <div class="product-bottom">
-                        <h4>₹1,999</h4>
-
-                        <button
-                            type="button"
-                            onclick="addToCart('Smart Watch')"
-                        >
-                            Add +
-                        </button>
-                    </div>
-                </div>
-            </article>
-
-
-            <!-- Product 4 -->
-            <article
-                class="product"
-                data-name="Travel Backpack"
-            >
-                <div class="product-img backpack">
-                    🎒
-                    <span class="product-tag">Best Value</span>
-                </div>
-
-                <div class="product-info">
-                    <h3>Travel Backpack</h3>
-                    <p>Perfect for college and travel</p>
-
-                    <div class="product-bottom">
-                        <h4>₹799</h4>
-
-                        <button
-                            type="button"
-                            onclick="addToCart('Travel Backpack')"
-                        >
-                            Add +
-                        </button>
-                    </div>
-                </div>
-            </article>
-
-        </div>
-
-        <p class="no-results" id="no-results">
-            😕 No products found.
-        </p>
-
-    </section>
-
-
-    <!-- Footer -->
     <footer>
 
-        <div class="footer-logo">
-            Shantanu<span>Shop</span>
+        <div class="footer-content">
+
+            <div class="footer-logo">
+                Shantanu<span>Shop</span>
+            </div>
+
+            <p>
+                Simple. Modern. Affordable.
+            </p>
+
         </div>
 
-        <p>
-            Simple. Modern. Affordable.
-        </p>
+        <div class="footer-line"></div>
 
         <p class="copyright">
             © 2026 ShantanuShop. Built with HTML, CSS & JavaScript.
