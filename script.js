@@ -1,34 +1,71 @@
 let cartCount = 0;
 
-function addToCart() {
+const cartCountElement = document.getElementById("cart-count");
+const searchInput = document.getElementById("search");
+const products = document.querySelectorAll(".product");
+const noResults = document.getElementById("no-results");
+
+
+// ================= CART =================
+
+function addToCart(productName) {
+
     cartCount++;
 
-    document.getElementById("cart-count").textContent = cartCount;
+    cartCountElement.textContent = cartCount;
 
-    alert("Product added to cart!");
+    console.log(`${productName} added to cart`);
+
 }
 
+
+// ================= SCROLL TO PRODUCTS =================
+
 function scrollToProducts() {
+
     document.getElementById("products").scrollIntoView({
         behavior: "smooth"
     });
+
 }
 
-document.getElementById("search").addEventListener("keyup", function () {
 
-    let searchValue = this.value.toLowerCase();
-    let products = document.querySelectorAll(".product");
+// ================= PRODUCT SEARCH =================
 
-    products.forEach(function(product) {
+searchInput.addEventListener("input", function () {
 
-        let productName = product.querySelector("h3").textContent.toLowerCase();
+    const searchValue = this.value.trim().toLowerCase();
+
+    let visibleProducts = 0;
+
+    products.forEach(function (product) {
+
+        const productName =
+            product.dataset.name.toLowerCase();
 
         if (productName.includes(searchValue)) {
-            product.style.display = "block";
+
+            product.style.display = "";
+
+            visibleProducts++;
+
         } else {
+
             product.style.display = "none";
+
         }
 
     });
+
+
+    if (visibleProducts === 0) {
+
+        noResults.style.display = "block";
+
+    } else {
+
+        noResults.style.display = "none";
+
+    }
 
 });
