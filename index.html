@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shantanu Shopping</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">Shantanu<span>Shop</span></div>
+
+        <input type="text" id="search" placeholder="Search products...">
+
+        <button class="cart-btn">
+            🛒 Cart <span id="cart-count">0</span>
+        </button>
+    </header>
+
+    <section class="hero">
+        <div>
+            <h1>Welcome to ShantanuShop</h1>
+            <p>Simple. Modern. Affordable.</p>
+            <button onclick="scrollToProducts()">Shop Now</button>
+        </div>
+    </section>
+
+    <section class="products" id="products">
+
+        <h2>Featured Products</h2>
+
+        <div class="product-container">
+
+            <div class="product">
+                <div class="product-img">👟</div>
+                <h3>Running Shoes</h3>
+                <p>Comfortable everyday shoes</p>
+                <h4>₹1,499</h4>
+                <button onclick="addToCart()">Add to Cart</button>
+            </div>
+
+            <div class="product">
+                <div class="product-img">🎧</div>
+                <h3>Wireless Headphones</h3>
+                <p>Enjoy high quality sound</p>
+                <h4>₹999</h4>
+                <button onclick="addToCart()">Add to Cart</button>
+            </div>
+
+            <div class="product">
+                <div class="product-img">⌚</div>
+                <h3>Smart Watch</h3>
+                <p>Smart lifestyle companion</p>
+                <h4>₹1,999</h4>
+                <button onclick="addToCart()">Add to Cart</button>
+            </div>
+
+            <div class="product">
+                <div class="product-img">🎒</div>
+                <h3>Travel Backpack</h3>
+                <p>Perfect for college and travel</p>
+                <h4>₹799</h4>
+                <button onclick="addToCart()">Add to Cart</button>
+            </div>
+
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2026 ShantanuShop | Built with HTML, CSS & JavaScript</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
