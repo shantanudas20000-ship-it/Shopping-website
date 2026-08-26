@@ -3,6 +3,10 @@
 A simple and modern frontend shopping website built using HTML, CSS, and JavaScript.
 
 ShantanuShop is a beginner-friendly e-commerce UI project designed to practice frontend web development, responsive layouts, product cards, search functionality, and cart interactions.
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
+![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-222222?style=for-the-badge&logo=github&logoColor=white)
 
 ## 📸 Website Preview
 
@@ -59,14 +63,12 @@ Handles interactive features such as product search and shopping cart functional
 
 ---
 
-🛠️ Technologies Used
+### 💻 Tech Stack
 
-- HTML5
-- CSS3
-- JavaScript
-- Git
-- GitHub
-- GitHub Pages
+- **HTML5** — Website structure
+- **CSS3** — Styling and responsive layout
+- **JavaScript** — Interactivity and functionality
+- **GitHub Pages** — Website deployment
 
 ---
 
