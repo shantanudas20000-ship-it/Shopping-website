@@ -4,9 +4,11 @@ A simple and modern frontend shopping website built using HTML, CSS, and JavaScr
 
 ShantanuShop is a beginner-friendly e-commerce UI project designed to practice frontend web development, responsive layouts, product cards, search functionality, and cart interactions.
 
-🌐 Live Demo
+## 📸 Website Preview
 
-"Visit ShantanuShop" (https://shantanudas20000-ship-it.github.io/Shopping-website/)
+![ShantanuShop Preview](shopping-website-preview.png)
+
+🌐 **[Live Demo](https://shantanudas20000-ship-it.github.io/Shopping-website/)**
 
 ---
 
