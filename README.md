@@ -6,7 +6,7 @@ ShantanuShop is a beginner-friendly e-commerce UI project designed to practice f
 
 ## 📸 Website Preview
 
-![ShantanuShop Preview](shopping-website-preview.png)
+![ShantanuShop Preview](shopping-website-preview.jpeg)
 
 🌐 **[Live Demo](https://shantanudas20000-ship-it.github.io/Shopping-website/)**
 
